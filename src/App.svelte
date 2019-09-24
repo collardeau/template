@@ -1,11 +1,5 @@
 <script>
-	export let name;
+  let name = "amigo";
 </script>
 
-<style>
-	h1 {
-		color: purple;
-	}
-</style>
-
-<h1>Hello {name}!</h1>
+<div class="bg-green-200">Hola {name}, que tal?</div>
