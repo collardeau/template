@@ -10,7 +10,18 @@ module.exports = {
     production &&
       purgecss({
         content: ["./**/*.html", "./**/*.svelte"],
-        defaultExtractor: content => content.match(/[A-Za-z0-9-_:/]+/g) || []
+        defaultExtractor: extractor
       })
   ]
 };
+
+function extractor(content) {
+  const matches = content.match(/[A-Za-z0-9-_:/]+/g) || [];
+  const res = matches.map(match => {
+    if (match.startsWith("class:")) {
+      return match.split(":")[1];
+    }
+    return match;
+  });
+  return res;
+}
