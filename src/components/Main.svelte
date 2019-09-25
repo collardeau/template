@@ -1,11 +1,11 @@
 <script>
   import Router from "svelte-spa-router";
-  import Home from "./Home.svelte";
+  import Feed from "./Feed.svelte";
   import About from "./About.svelte";
   const routes = {
-    "/": Home,
+    "/": Feed,
     "/about": About,
-    "*": Home
+    "*": Feed
   };
 </script>
 

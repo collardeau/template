@@ -1,7 +1,7 @@
 <script>
   import { link } from "svelte-spa-router";
   // https://www.youtube.com/watch?v=ZT5vwF6Ooig&list=PL7CcGwsqRpSM3w9BT_21tUU8JN2SnyckR&index=16
-  export let title = "Title";
+  export let title = "title";
   export let links = [];
   export let colors = "bg-gray-900 text-white";
   let navIsOpen = false;
@@ -12,7 +12,7 @@
   class="{colors} sm:flex sm:justify-between sm:items-center sm:px-4 sm:py-3">
   <div class="px-4 py-3 flex justify-between items-center sm:p-0">
     <div>
-      <h1 class="font-semibold text-2xl">{title}</h1>
+      <h1 class="font-semibold text-2xl capitalize">{title}</h1>
     </div>
     <div class="sm:hidden">
       <button
@@ -38,15 +38,15 @@
   </div>
   <nav class="px-2 pt-1 pb-4 {navIsOpen ? 'block' : 'hidden'} sm:block sm:p-0">
     <ul class="sm:flex">
-      {#each links as { href, id }, i}
-        <li key={id}>
+      {#each links as { href, name }, i}
+        <li>
           <a
             {href}
             use:link
             class:mt-1={i}
             class="block px-2 py-1 text-white font-semibold rounded
-            hover:bg-gray-800 sm:mt-0 sm:ml-4">
-            {id}
+            hover:bg-gray-800 sm:mt-0 sm:ml-4 capitalize">
+            {name}
           </a>
         </li>
       {/each}
