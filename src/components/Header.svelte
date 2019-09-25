@@ -1,6 +1,6 @@
 <script>
   // https://www.youtube.com/watch?v=ZT5vwF6Ooig&list=PL7CcGwsqRpSM3w9BT_21tUU8JN2SnyckR&index=16
-  export let title = "";
+  export let title = "Title";
   export let links = [];
   export let colors = "bg-gray-900 text-white";
   let navIsOpen = false;
