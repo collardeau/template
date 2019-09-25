@@ -1,12 +1,14 @@
 <script>
+  import Router from "svelte-spa-router";
   import Home from "./Home.svelte";
-  import { route } from "../stores/route";
+  import About from "./About.svelte";
+  const routes = {
+    "/": Home,
+    "/about": About,
+    "*": Home
+  };
 </script>
 
 <main class="px-2">
-  {#if $route === 'about'}
-    About
-  {:else}
-    <Home />
-  {/if}
+  <Router {routes} />
 </main>
