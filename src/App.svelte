@@ -1,8 +1,8 @@
 <script>
   import Router from "svelte-spa-router";
-  import Feed from "./Feed.svelte";
-  import Item from "./Item.svelte";
-  import About from "./About.svelte";
+  import Feed from "./components/Feed.svelte";
+  import Item from "./components/Item.svelte";
+  import About from "./components/About.svelte";
   import Header from "./components/Header.svelte";
 
   let title = "awesome app";
