@@ -3,7 +3,7 @@
   export let loading = false;
 </script>
 
-<section in:fade={{ duration: 100 }}>
+<section in:fade={{ duration: 200 }}>
   {#if loading}
     <slot name="loading">
       <p>Loading...</p>
