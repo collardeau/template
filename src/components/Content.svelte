@@ -12,6 +12,6 @@
   };
 </script>
 
-<main class="px-2">
+<main class="px-2 py-2">
   <Router {routes} />
 </main>

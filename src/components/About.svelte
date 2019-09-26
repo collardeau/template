@@ -4,7 +4,7 @@
 
 <section in:fade={{ duration: 500 }}>
 
-  <h3 class="text-2xl mt-4 font-semibold">About</h3>
+  <h3 class="text-2xl font-semibold">About</h3>
 
   <p class="">
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima rerum at
