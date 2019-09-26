@@ -1,5 +1,4 @@
 <script>
-  import { link } from "svelte-spa-router";
   // https://www.youtube.com/watch?v=ZT5vwF6Ooig&list=PL7CcGwsqRpSM3w9BT_21tUU8JN2SnyckR&index=16
   export let title = "title";
   export let links = [];
@@ -42,7 +41,6 @@
         <li>
           <a
             {href}
-            use:link
             class:mt-1={i}
             class="block px-2 py-1 text-white font-semibold rounded
             hover:bg-gray-800 sm:mt-0 sm:ml-4 capitalize">

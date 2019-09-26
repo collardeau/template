@@ -4,8 +4,9 @@
 
   let title = "awesome app";
   let links = [
-    { name: "feed", href: "/feed" },
-    { name: "about", href: "/about" }
+    // todo: could we generate that?
+    { name: "feed", href: "#/feed" },
+    { name: "about", href: "#/about" }
   ];
 </script>
 
