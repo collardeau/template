@@ -4,8 +4,8 @@
 
 <Page>
   <section>
-    <h3 class="text-2xl font-semibold">About</h3>
-    <p class="">
+    <h3>About</h3>
+    <p>
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima rerum at
       error eos quam quo sapiente porro similique iste, repellendus enim
       reiciendis! Aliquam eveniet magni reiciendis quod, ea, voluptates quia

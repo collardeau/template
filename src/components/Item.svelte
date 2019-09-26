@@ -2,14 +2,13 @@
   import Page from "./Page.svelte";
   import { item, itemLoading } from "../stores/items";
   export let params = {};
-  let { id } = params;
-  item.load(id);
+  item.load(params.id);
 </script>
 
 <Page loading={$itemLoading}>
-  <section class="max-w-xl mx-auto">
-    <h3 class="text-2xl font-semibold capitalize">{$item.title}</h3>
-    <img class="pt-2 w-full object-cover" src={$item.img} alt="item" />
+  <section class="center-column">
+    <h3>{$item.title}</h3>
+    <img class="pt-2 cover" src={$item.img} alt={$item.title} />
     <p class="pt-2">{$item.text}</p>
     <p class="pt-1 text-gray-500 text-sm">{$item.createdOn}</p>
   </section>

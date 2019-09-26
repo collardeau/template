@@ -1,5 +1,24 @@
-@import "tailwindcss/base";
+@tailwind base;
+@tailwind components;
 
-@import "tailwindcss/components";
+.app-wrapper {
+  @apply antialiased text-gray-900 bg-gray-200 min-h-screen;
+}
 
-@import "tailwindcss/utilities";
+h1 {
+  @apply text-2xl font-semibold capitalize;
+}
+
+h3 {
+  @apply text-xl font-semibold capitalize;
+}
+
+.center-column {
+  @apply max-w-xl mx-auto;
+}
+
+.cover {
+  @apply w-full object-cover;
+}
+
+@tailwind utilities;

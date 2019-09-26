@@ -12,7 +12,7 @@
   class="{colors} sm:flex sm:justify-between sm:items-center sm:px-4 sm:py-3">
   <div class="px-4 py-3 flex justify-between items-center sm:p-0">
     <div>
-      <h1 class="font-semibold text-2xl capitalize">{title}</h1>
+      <h1>{title}</h1>
     </div>
     <div class="sm:hidden">
       <button

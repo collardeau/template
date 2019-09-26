@@ -9,7 +9,7 @@
   ];
 </script>
 
-<div class="antialiased text-gray-900 bg-gray-200 min-h-screen">
+<div class="app-wrapper ">
   <Header {title} {links} />
   <Content />
 </div>
