@@ -1,7 +1,7 @@
 <script>
   // https://www.youtube.com/watch?v=ZT5vwF6Ooig&list=PL7CcGwsqRpSM3w9BT_21tUU8JN2SnyckR&index=16
   export let title = "title";
-  export let links = [];
+  export let navLinks = [];
   export let colors = "bg-gray-900 text-white";
   let navIsOpen = false;
   let toggleMenu = () => (navIsOpen = !navIsOpen);
@@ -37,7 +37,7 @@
   </div>
   <nav class="px-2 pt-1 pb-4 {navIsOpen ? 'block' : 'hidden'} sm:block sm:p-0">
     <ul class="sm:flex">
-      {#each links as { href, name }, i}
+      {#each navLinks as { href, name }, i}
         <li>
           <a
             {href}
