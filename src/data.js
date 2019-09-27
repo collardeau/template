@@ -3,7 +3,7 @@ import faker from "faker";
 let id = 0;
 function createItems(num = 3) {
   return [...Array(num)].map((_, i) => {
-    let title = faker.lorem.words();
+    let title = faker.lorem.words(2);
     return {
       id: `post-${id++}`,
       title,
