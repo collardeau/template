@@ -7,6 +7,5 @@
 </script>
 
 <Page>
-  <p>This is the example of a grid which wraps elements</p>
-  <Wrap {items} />
+  <h2>Here will be example of a Slick element</h2>
 </Page>
