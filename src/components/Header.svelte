@@ -1,4 +1,6 @@
 <script>
+  import { location } from "svelte-spa-router";
+  // responsive header with tailwind, see:
   // https://www.youtube.com/watch?v=ZT5vwF6Ooig&list=PL7CcGwsqRpSM3w9BT_21tUU8JN2SnyckR&index=16
   export let title = "title";
   export let navLinks = [];
@@ -11,7 +13,13 @@
   class="{colors} sm:flex sm:justify-between sm:items-center sm:px-4 sm:py-3">
   <div class="px-4 py-3 flex justify-between items-center sm:p-0">
     <div>
-      <h1>{title}</h1>
+      {#if $location === '/'}
+        <h1>{title}</h1>
+      {:else}
+        <a href="#/">
+          <h1>{title}</h1>
+        </a>
+      {/if}
     </div>
     <div class="sm:hidden">
       <button

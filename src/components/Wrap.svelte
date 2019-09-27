@@ -2,9 +2,9 @@
   export let items = [];
 </script>
 
-<section class="center-column">
+<section class="flex flex-wrap justify-around">
   {#each items as { id, img, title, createdOn }}
-    <article class="mb-4 bg-white shadow">
+    <article class="bg-white shadow mb-4 w-48 h-64">
       <a href="#/item/{id}">
         <img class="h-32 cover" src={img} alt="item" />
         <section class="p-2 ">

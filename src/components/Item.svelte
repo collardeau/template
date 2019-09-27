@@ -1,15 +1,16 @@
 <script>
-  import Page from "./Page.svelte";
-  import { item, itemLoading } from "../stores/items";
+  import Page from "./pages/Page.svelte";
+  import { createItem } from "../stores/items";
   export let params = {};
-  item.load(params.id);
+  let item = createItem(params.id);
+  let { title, img, text, createdOn } = $item;
 </script>
 
-<Page loading={$itemLoading}>
+<Page>
   <section class="center-column">
-    <h3>{$item.title}</h3>
-    <img class="pt-2 cover" src={$item.img} alt={$item.title} />
-    <p class="pt-2">{$item.text}</p>
-    <p class="pt-1 text-gray-500 text-sm">{$item.createdOn}</p>
+    <h3>{title}</h3>
+    <img class="pt-2 cover" src={img} alt={title} />
+    <p class="pt-2">{text}</p>
+    <p class="pt-1 text-gray-500 text-sm">{createdOn}</p>
   </section>
 </Page>

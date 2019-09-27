@@ -1,6 +1,9 @@
 <script>
   import Router from "svelte-spa-router";
-  import Feed from "./components/Feed.svelte";
+  import { fade } from "svelte/transition";
+  import Home from "./components/Home.svelte";
+  import Page1 from "./components/pages/Page1.svelte";
+  import Page2 from "./components/pages/Page2.svelte";
   import Item from "./components/Item.svelte";
   import About from "./components/About.svelte";
   import Header from "./components/Header.svelte";
@@ -8,14 +11,17 @@
   let title = "awesome app";
 
   let routes = {
-    "/": Feed,
+    "/": Home,
+    "/abstract": Page1,
+    "/animal": Page2,
     "/item/:id": Item,
     "/about": About,
-    "*": Feed
+    "*": Home
   };
 
   let navLinks = [
-    { name: "feed", href: "#/feed" },
+    { name: "abstract", href: "#/abstract" },
+    { name: "animals", href: "#/animal" },
     { name: "about", href: "#/about" }
   ];
 </script>
