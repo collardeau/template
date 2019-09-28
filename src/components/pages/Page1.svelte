@@ -19,7 +19,8 @@
       {#each tabs as tab}
         <li class="ml-3">
           <button
-            class="capitalize hover:font-bold focus:outline-none"
+            class="capitalize hover:font-bold focus:outline-none
+            focus:shadow-outline active:bg-gray-200"
             class:font-bold={activeTab === tab}
             on:click={() => onTabClick(tab)}>
             {tab}
