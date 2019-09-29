@@ -1,12 +1,13 @@
 <script>
   import Page from "./Page.svelte";
   import Feed from "../Feed.svelte";
-  import Wrap from "../Wrap.svelte";
+  import Grid from "../Grid.svelte";
+  import Carousel from "../Carousel.svelte";
   import { itemsByCategory } from "../../stores/items";
 
   let items = $itemsByCategory.abstract;
-  let tabs = ["feed", "grid"];
-  let activeTab = "feed";
+  let tabs = ["feed", "grid", "carousel"];
+  let activeTab = "grid";
   let onTabClick = tab => {
     activeTab = tab;
   };
@@ -31,8 +32,15 @@
   </section>
   {#if activeTab === 'grid'}
     <section>
-      <p class="mb-4">This is the example of the Grid layout</p>
-      <Wrap {items} />
+      <p class="mb-4">This is the example of the Grid layout, using Flexbox.</p>
+      <Grid {items} />
+    </section>
+  {:else if activeTab === 'carousel'}
+    <section>
+      <p class="mb-4">
+        This is the example of a Carousel, and is a work-in-progress
+      </p>
+      <Carousel {items} />
     </section>
   {:else}
     <section>
