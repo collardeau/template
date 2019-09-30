@@ -2,7 +2,7 @@
   export let items = [];
 </script>
 
-<section class="flex flex-wrap flex-between max-w-6xl mx-auto">
+<section class="flex flex-between max-w-6xl mx-auto">
   {#each items as { id, img, title, createdOn }}
     <article class="px-2 mb-4 w-full sm:w-1/2 lg:w-1/3 xl:w-1/4">
       <a href="#/item/{id}">

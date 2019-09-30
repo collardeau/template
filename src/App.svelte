@@ -8,7 +8,7 @@
   import About from "./components/About.svelte";
   import Header from "./components/Header.svelte";
 
-  let title = "awesome app";
+  let title = "demo gallery";
 
   let routes = {
     "/": Home,

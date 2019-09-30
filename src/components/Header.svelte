@@ -23,7 +23,6 @@
     </div>
     <div class="sm:hidden">
       <button
-        type="button"
         on:click={toggleMenu}
         class="block text-gray-500 hover:text-white focus:text-white
         focus:outline-none focus:shadow-outline active:bg-gray-800">
