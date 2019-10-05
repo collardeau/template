@@ -6,7 +6,7 @@
   import Page2 from "./components/pages/Page2.svelte";
   import Item from "./components/Item.svelte";
   import About from "./components/About.svelte";
-  import Header from "./components/Fluid-Header.svelte";
+  import Header from "./components/fluid-header/Fluid-Header.svelte";
 
   let title = "New Header";
 
@@ -32,28 +32,28 @@
 </script>
 
 <style>
-  div :global(.crazy) {
+  :global(.fluid-header-container) {
     background-color: goldenrod;
     padding: 10px;
+  }
+  :global(.fluid-header-button:hover) {
+    color: green;
   }
 </style>
 
 <div class="app-wrapper">
-  <Header
-    bind:toggleMenu
-    bp="lg"
-    wrapperClass="bg-red-500 p-8"
-    buttonClass="foobar">
+  <Header>
     <div slot="left">
       <h1>{title}</h1>
     </div>
-    <!-- <div slot="right-small">
-      <button on:click={handleClick}>Toggle</button>
-    </div> -->
-    <div slot="horizontal">Horizontal links</div>
-    <div slot="menu-slider">Vertical links</div>
+    <div slot="right">My Horizontal Menu</div>
+    <div slot="drawer">My Vertical Menu</div>
   </Header>
   <main class="p-2">
     <Router {routes} />
   </main>
 </div>
+
+<!-- <div slot="right-collapsed">
+      <button on:click={handleClick}>Toggle</button>
+    </div> -->
