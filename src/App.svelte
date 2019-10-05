@@ -42,18 +42,24 @@
 </style>
 
 <div class="app-wrapper">
-  <Header>
+  <Header
+    bind:toggleMenu
+    on:open={() => {
+      console.log('open');
+    }}
+    on:close={() => {
+      console.log('close');
+    }}>
     <div slot="left">
       <h1>{title}</h1>
     </div>
     <div slot="right">My Horizontal Menu</div>
     <div slot="drawer">My Vertical Menu</div>
+    <div slot="right-collapsed">
+      <button on:click={handleClick}>Toggle</button>
+    </div>
   </Header>
   <main class="p-2">
     <Router {routes} />
   </main>
 </div>
-
-<!-- <div slot="right-collapsed">
-      <button on:click={handleClick}>Toggle</button>
-    </div> -->

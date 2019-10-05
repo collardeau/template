@@ -1,15 +1,21 @@
 <script>
+  import { createEventDispatcher } from "svelte";
   import { slide } from "svelte/transition";
   import Wrap from "./Wrap.svelte";
   import DefaultButton from "./DefaultButton.svelte";
   export let wrapperClass = "fluid-header-container";
   export let defaultButtonClass = "fluid-header-button";
-  export let toggleMenu = () => (navIsOpen = !navIsOpen);
   export let bp = "sm";
   export let duration = 300;
   export let as = "header";
   let navIsOpen = false;
-  // todo: run a function or open or close?
+  // todo: build own class names instead of .flex which could clash?
+
+  let dispatch = createEventDispatcher();
+  export let toggleMenu = () => {
+    dispatch(navIsOpen ? "close" : "open");
+    return (navIsOpen = !navIsOpen);
+  };
 </script>
 
 <Wrap {as} {wrapperClass}>
