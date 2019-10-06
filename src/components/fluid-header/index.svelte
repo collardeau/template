@@ -8,7 +8,7 @@
   export let bp = "sm";
   export let duration = 200;
   export let as = "header";
-  let drawerIsOpen = false;
+  export let drawerIsOpen = false;
 
   let dispatch = createEventDispatcher();
   export let toggleDrawer = () => {
