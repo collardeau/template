@@ -5,6 +5,7 @@
 </script>
 
 <button
+  type="button"
   on:click={toggleDrawer}
   class="h-6 w-6 block text-gray-700 hover:text-gray-900 focus:text-gray-900
   focus:outline-none focus:shadow-outline active:bg-gray-900 {defaultButtonClass}">
