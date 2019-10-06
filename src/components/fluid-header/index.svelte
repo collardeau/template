@@ -7,7 +7,7 @@
 
   export let containerClass = "fluid-header-container";
   export let defaultButtonClass = "fluid-header-button";
-  export let bp = "sm";
+  export let breakpoint = "sm";
   export let duration = 200;
   export let as = "header";
   export let drawerIsOpen = false;
@@ -18,24 +18,25 @@
     return (drawerIsOpen = !drawerIsOpen);
   };
 
-  $: validate({ duration, as, bp, containerClass, defaultButtonClass });
+  $: validate({ duration, as, breakpoint, containerClass, defaultButtonClass });
 </script>
 
 <Wrap {as} {containerClass}>
-  <div class="{bp}:flex {bp}:justify-between {bp}:items-center">
+  <div
+    class="{breakpoint}:flex {breakpoint}:justify-between {breakpoint}:items-center">
     <div class="flex justify-between items-center">
       <slot name="left">left</slot>
-      <div class="{bp}:hidden">
+      <div class="{breakpoint}:hidden">
         <slot name="right-collapsed">
           <DefaultButton {toggleDrawer} {drawerIsOpen} {defaultButtonClass} />
         </slot>
       </div>
     </div>
-    <div class="hidden {bp}:block">
+    <div class="hidden {breakpoint}:block">
       <slot name="right">right</slot>
     </div>
     {#if drawerIsOpen}
-      <div transition:slide={{ duration }} class="{bp}:hidden">
+      <div transition:slide={{ duration }} class="{breakpoint}:hidden">
         <slot name="drawer">drawer</slot>
       </div>
     {/if}

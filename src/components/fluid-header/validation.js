@@ -5,7 +5,7 @@ const validBp = ["sm", "md", "lg", "xl"];
 
 export default function validate({
   duration,
-  bp,
+  breakpoint,
   as,
   containerClass,
   defaultButtonClass
@@ -21,9 +21,9 @@ export default function validate({
       "The `as` prop is not valid. It should be one of 'div', 'header' or 'section' but is:",
       as
     );
-  if (!validBp.some(b => b === bp))
+  if (!validBp.some(b => b === breakpoint))
     warn(
-      "The `bp` prop is not valid. It should be one of 'sm', 'md', 'lg' or 'xl' but is: ",
-      bp
+      "The `breakpoint` prop is not valid. It should be one of 'sm', 'md', 'lg' or 'xl' but is: ",
+      breakpoint
     );
 }
