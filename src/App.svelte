@@ -25,9 +25,9 @@
     { name: "about", href: "#/about" }
   ];
 
-  let toggleMenu;
+  let toggleDrawer;
   const handleClick = () => {
-    toggleMenu();
+    toggleDrawer();
   };
 </script>
 
@@ -43,7 +43,7 @@
 
 <div class="app-wrapper">
   <Header
-    bind:toggleMenu
+    bind:toggleDrawer
     on:open={() => {
       console.log('open');
     }}
