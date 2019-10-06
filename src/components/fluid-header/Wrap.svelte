@@ -1,10 +1,6 @@
 <script>
   export let as = "div";
   export let wrapperClass = "";
-  $: {
-    console.log("tick");
-    console.log(wrapperClass);
-  }
 </script>
 
 {#if as === 'header'}

@@ -9,7 +9,6 @@
   export let duration = 300;
   export let as = "header";
   let navIsOpen = false;
-  // todo: build own class names instead of .flex which could clash?
 
   let dispatch = createEventDispatcher();
   export let toggleMenu = () => {
@@ -38,6 +37,3 @@
     {/if}
   </div>
 </Wrap>
-
-<!-- responsive header with tailwind, see:
-  https://www.youtube.com/watch?v=ZT5vwF6Ooig&list=PL7CcGwsqRpSM3w9BT_21tUU8JN2SnyckR&index=16 -->

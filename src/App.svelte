@@ -6,7 +6,7 @@
   import Page2 from "./components/pages/Page2.svelte";
   import Item from "./components/Item.svelte";
   import About from "./components/About.svelte";
-  import Header from "./components/fluid-header/Fluid-Header.svelte";
+  import Header from "./components/fluid-header/index.svelte";
 
   let title = "New Header";
 
