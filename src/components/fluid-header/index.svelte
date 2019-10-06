@@ -3,6 +3,8 @@
   import { slide } from "svelte/transition";
   import Wrap from "./Wrap.svelte";
   import DefaultButton from "./DefaultButton.svelte";
+  import validate from "./validation";
+
   export let containerClass = "fluid-header-container";
   export let defaultButtonClass = "fluid-header-button";
   export let bp = "sm";
@@ -15,6 +17,8 @@
     dispatch(drawerIsOpen ? "close" : "open");
     return (drawerIsOpen = !drawerIsOpen);
   };
+
+  $: validate({ duration, as, bp, containerClass, defaultButtonClass });
 </script>
 
 <Wrap {as} {containerClass}>
